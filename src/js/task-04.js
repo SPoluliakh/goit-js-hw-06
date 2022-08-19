@@ -3,14 +3,16 @@ const refs = {
   incrimentEl: document.querySelector('[data-action="increment"'),
   deccrimentEl: document.querySelector('[data-action="decrement"]'),
 };
+let counterValue = 0;
 
-refs.counterValue.textContent = 0;
 console.dir(refs.counterValue);
 
 refs.incrimentEl.addEventListener('click', () => {
-  refs.counterValue.textContent += 1;
+  counterValue += 1;
+  refs.counterValue.textContent = counterValue;
 });
 
 refs.deccrimentEl.addEventListener('click', () => {
-  refs.counterValue.textContent -= 1;
+  counterValue -= 1;
+  refs.counterValue.textContent = counterValue;
 });
