@@ -5,8 +5,6 @@ const refs = {
 };
 let counterValue = 0;
 
-console.dir(refs.counterValue);
-
 refs.incrimentEl.addEventListener('click', () => {
   counterValue += 1;
   refs.counterValue.textContent = counterValue;
