@@ -2,11 +2,11 @@ const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Con
 
 const listEl = document.querySelector('#ingredients');
 
-const makeIngredientsItem = function (el) {
-  const potatoesEl = document.createElement('li');
-  potatoesEl.textContent = el;
-  potatoesEl.classList.add('item');
-  return potatoesEl;
+const makeIngredientsItem = el => {
+  const element = document.createElement('li');
+  element.textContent = el;
+  element.classList.add('item');
+  return element;
 };
 const arrayOfItems = ingredients.map(makeIngredientsItem);
 
